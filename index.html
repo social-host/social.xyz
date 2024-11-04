@@ -3,86 +3,104 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social.xyz</title>
+    <title>social.xyz</title>
     <style>
-        /* Basic Reset and Styling */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
         body {
             font-family: Arial, sans-serif;
             background-color: #f9f9f9;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
             padding: 20px;
         }
-        h1 {
-            margin-top: 20px;
-            color: #2c3e50;
+        h1, h2 {
+            text-align: center;
+            color: #333;
         }
-        p {
-            margin-bottom: 20px;
-            font-size: 18px;
+        .section {
+            margin-bottom: 40px;
         }
-
-        /* Container for Logos */
-        .logo-container {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        /* Logo Button Styling */
         .logo-button {
-            width: 150px;
-            height: 150px;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
+            display: inline-block;
+            margin: 15px;
+            text-align: center;
+            color: #333;
+            text-decoration: none;
         }
         .logo-button img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
         }
-        .logo-button:hover {
-            transform: scale(1.1);
+        .logo-button p {
+            margin-top: 8px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
 
-    <h1>Welcome to Social.xyz</h1>
-    <p>Explore our Instagram pages and partners:</p>
+    <!-- Header Section -->
+    <div class="header">
+        <h1>social.xyz</h1>
+        <p>Professional Video Editing & Social Media Management Services</p>
+    </div>
 
-    <div class="logo-container">
-        <!-- Evolvi Vids Button -->
-        <a href="https://www.instagram.com/evolvi._.vids/" target="_blank" class="logo-button">
-            <img src="path/to/evolvi_vids_logo.jpg" alt="Evolvi Vids Logo">
-        </a>
+    <div class="container">
 
-        <!-- Explore Jhajjar Button (Replace placeholder when logo is provided) -->
-        <a href="https://www.instagram.com/explore_jhajjar_/" target="_blank" class="logo-button">
-            <img src="path/to/explore_jhajjar_logo.jpg" alt="Explore Jhajjar Logo">
-        </a>
+        <!-- Our Pages Section -->
+        <div class="section">
+            <h2>Our Pages</h2>
+            <a href="https://www.instagram.com/evolvi._.vids/" class="logo-button" target="_blank">
+                <img src="images/evolvi_vids_logo.jpg" alt="Evolvi Vids Logo">
+                <p>evolvi._.vids</p>
+            </a>
+            <a href="https://www.instagram.com/explore_jhajjar_/" class="logo-button" target="_blank">
+                <img src="images/explore_jhajjar_logo.jpg" alt="Explore Jhajjar Logo">
+                <p>explore_jhajjar_</p>
+            </a>
+        </div>
 
-        <!-- Sone Ki Khan Gurgaon Button -->
-        <a href="https://www.instagram.com/sone_ki_khan_gurgaon_/" target="_blank" class="logo-button">
-            <img src="path/to/sone_ki_khan_gurgaon_logo.jpg" alt="Sone Ki Khan Gurgaon Logo">
-        </a>
+        <!-- Client Pages Section -->
+        <div class="section">
+            <h2>Our Clients</h2>
+            <a href="https://www.instagram.com/sone_ki_khan_gurgaon_/" class="logo-button" target="_blank">
+                <img src="images/sone_ki_khan_gurgaon_logo.jpg" alt="Sone Ki Khan Gurgaon Logo">
+                <p>Sone Ki Khan Gurgaon</p>
+            </a>
+            <a href="https://www.instagram.com/bajrangi_nutritionss/" class="logo-button" target="_blank">
+                <img src="images/bajrangi_nutritions_logo.jpg" alt="Bajrangi Nutritions Logo">
+                <p>Bajrangi Nutritions</p>
+            </a>
+        </div>
 
-        <!-- Bajrangi Nutritions Button -->
-        <a href="https://www.instagram.com/bajrangi_nutritionss/" target="_blank" class="logo-button">
-            <img src="path/to/bajrangi_nutritions_logo.jpg" alt="Bajrangi Nutritions Logo">
-        </a>
+        <!-- Services Section -->
+        <div class="section">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Professional Video Editing</li>
+                <li>Full Social Media Management</li>
+                <li>Account Setup</li>
+                <li>Google My Business</li>
+                <li>Caption Writing</li>
+                <li>Performance Tracking</li>
+                <li>Content Scheduling</li>
+                <li>Targeted Instagram Ads</li>
+                <li>Instagram Highlights Cover</li>
+                <li>Research Content</li>
+            </ul>
+        </div>
     </div>
 
 </body>

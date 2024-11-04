@@ -8,14 +8,14 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000; /* Changed background color to black */
+            background-color: #fff; /* Changed background color to white */
             margin: 0;
             padding: 0;
             display: flex;
             overflow-x: hidden; /* Prevent horizontal scroll */
         }
         .nav {
-            background-color: #333;
+            background-color: #000; /* Changed navigation background to dark black */
             color: #fff;
             width: 200px;
             padding: 20px;
@@ -64,40 +64,38 @@
         }
         .container {
             max-width: 800px;
-            margin-left: 240px; /* Increased margin for content */
+            margin-left: 260px; /* Increased margin for content */
             padding: 20px;
         }
         h2 {
             text-align: center;
-            color: #fff; /* Changed header color to white */
+            color: #000; /* Changed header color to black */
         }
         .section {
             margin-bottom: 40px;
         }
         .card {
-            background-color: #444; /* Card background color */
+            background-color: #fff; /* Card background color remains white */
             border-radius: 8px;
             padding: 20px;
             margin: 10px 0;
             transition: transform 0.2s;
-            color: #fff;
+            color: #000; /* Changed card text color to black */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
             display: flex;
             align-items: center;
-        }
-        .card:hover {
-            transform: scale(1.05);
+            flex-direction: column; /* Align items in a column */
         }
         .card img {
             width: 30px; /* Size of the service icon */
             height: 30px;
-            margin-right: 10px; /* Space between icon and text */
+            margin-bottom: 10px; /* Space between icon and text */
         }
         .logo-button {
             display: inline-block;
             margin: 15px;
             text-align: center;
-            color: #fff; /* Changed text color to white */
+            color: #000; /* Changed text color to black */
             text-decoration: none;
         }
         .logo-button img {
@@ -114,10 +112,10 @@
 
         /* Scrollbar Styling */
         ::-webkit-scrollbar {
-            width: 6px; /* Reduced scrollbar width */
+            width: 4px; /* Reduced scrollbar width */
         }
         ::-webkit-scrollbar-track {
-            background: #444; /* Background color of the scrollbar track */
+            background: #f1f1f1; /* Background color of the scrollbar track */
         }
         ::-webkit-scrollbar-thumb {
             background: #888; /* Color of the scrollbar thumb */
@@ -152,35 +150,43 @@
             <h2>Our Services</h2>
             <div class="card">
                 <img src="images/account-setup-icon.png" alt="Account Setup Icon"> <!-- Path to account setup icon -->
-                <div>Account Setup: Create and optimize your social media accounts for success.</div>
+                <div>Account Setup:</div>
+                <div>Create and optimize your social media accounts for success.</div>
             </div>
             <div class="card">
                 <img src="images/google-business-icon.png" alt="Google My Business Icon"> <!-- Path to Google My Business icon -->
-                <div>Google My Business: Enhance your local visibility and reach more customers.</div>
+                <div>Google My Business:</div>
+                <div>Enhance your local visibility and reach more customers.</div>
             </div>
             <div class="card">
                 <img src="images/caption-writing-icon.png" alt="Caption Writing Icon"> <!-- Path to caption writing icon -->
-                <div>Caption Writing: Craft engaging captions that resonate with your audience.</div>
+                <div>Caption Writing:</div>
+                <div>Craft engaging captions that resonate with your audience.</div>
             </div>
             <div class="card">
                 <img src="images/performance-tracking-icon.png" alt="Performance Tracking Icon"> <!-- Path to performance tracking icon -->
-                <div>Performance Tracking: Monitor your social media performance and optimize strategies.</div>
+                <div>Performance Tracking:</div>
+                <div>Monitor your social media performance and optimize strategies.</div>
             </div>
             <div class="card">
                 <img src="images/content-scheduling-icon.png" alt="Content Scheduling Icon"> <!-- Path to content scheduling icon -->
-                <div>Content Scheduling: Plan and schedule your posts for maximum impact.</div>
+                <div>Content Scheduling:</div>
+                <div>Plan and schedule your posts for maximum impact.</div>
             </div>
             <div class="card">
                 <img src="images/instagram-ads-icon.png" alt="Targeted Instagram Ads Icon"> <!-- Path to targeted Instagram ads icon -->
-                <div>Targeted Instagram Ads: Reach your ideal audience with effective ads.</div>
+                <div>Targeted Instagram Ads:</div>
+                <div>Reach your ideal audience with effective ads.</div>
             </div>
             <div class="card">
                 <img src="images/highlights-cover-icon.png" alt="Instagram Highlights Cover Icon"> <!-- Path to Instagram highlights cover icon -->
-                <div>Instagram Highlights Cover: Create stunning covers for your Instagram highlights.</div>
+                <div>Instagram Highlights Cover:</div>
+                <div>Create stunning covers for your Instagram highlights.</div>
             </div>
             <div class="card">
                 <img src="images/research-content-icon.png" alt="Research Content Icon"> <!-- Path to research content icon -->
-                <div>Research Content: In-depth research to inform your content strategy.</div>
+                <div>Research Content:</div>
+                <div>In-depth research to inform your content strategy.</div>
             </div>
         </div>
 
@@ -197,17 +203,14 @@
                     <p>explore_jhajjar_</p>
                 </a>
                 <a href="https://www.instagram.com/sone_ki_khan_gurgaon_/" class="logo-button" target="_blank">
-                    <img src="images/sone_ki_khan_gurgaon_logo.jpg" alt="Sone Ki Khan Gurgaon Logo">
-                    <p>Sone Ki Khan Gurgaon</p>
+                    <img src="images/sone_ki_khan_logo.jpg" alt="Sone Ki Khan Logo">
+                    <p>Sone Ki Khan</p>
                 </a>
                 <a href="https://www.instagram.com/bajrangi_nutritionss/" class="logo-button" target="_blank">
                     <img src="images/bajrangi_nutritionss_logo.jpg" alt="Bajrangi Nutritionss Logo">
                     <p>Bajrangi Nutritionss</p>
                 </a>
-                <a href="https://www.instagram.com/aesthetic._.vibesss/" class="logo-button" target="_blank">
-                    <img src="images/aesthetic_vibesss_logo.jpg" alt="Aesthetic Vibesss Logo">
-                    <p>Aesthetic Vibesss</p>
-                </a>
+                
             </div>
         </div>
 

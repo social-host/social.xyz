@@ -22,14 +22,23 @@
             position: fixed;
             height: 100%;
         }
-        .nav h1 {
-            font-size: 24px;
-            text-align: center;
-        }
         .nav img {
             width: 100%;
             border-radius: 50%; /* Circular logo */
             margin-bottom: 20px;
+        }
+        .nav h1 {
+            font-size: 20px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .nav h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            margin: 0;
+            padding: 5px 0;
+            border-bottom: 2px solid #fff; /* Horizontal line */
         }
         .nav p {
             text-align: center;
@@ -39,6 +48,10 @@
             text-decoration: none;
             display: block;
             margin: 10px 0;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: yellow; /* Change text color on hover */
         }
         .header {
             margin-left: 220px; /* To prevent overlap with the nav */
@@ -67,9 +80,16 @@
             transition: transform 0.2s;
             color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
         }
         .card:hover {
             transform: scale(1.05);
+        }
+        .card img {
+            width: 30px; /* Size of the service icon */
+            height: 30px;
+            margin-right: 10px; /* Space between icon and text */
         }
         .logo-button {
             display: inline-block;
@@ -104,7 +124,6 @@
         ::-webkit-scrollbar-thumb:hover {
             background: #555; /* Color of the scrollbar thumb on hover */
         }
-
     </style>
 </head>
 <body>
@@ -112,7 +131,8 @@
     <!-- Left Navigation Panel -->
     <div class="nav">
         <img src="images/site-logo.jpg" alt="Site Logo"> <!-- Path to your site logo -->
-        <h1>Contact Us</h1>
+        <h1>Your Name</h1> <!-- Replace with your name -->
+        <h2>Contact Us</h2>
         <p>Email: <a href="mailto:info.social.xyz@gmail.com" style="color:white;">info.social.xyz@gmail.com</a></p>
         <p>Phone: <a href="tel:+1234567890" style="color:white;">+1 234 567 890</a></p>
     </div>
@@ -128,22 +148,52 @@
         <!-- About Us Section -->
         <div class="section" id="about">
             <h2>About Us</h2>
-            <p>At social.xyz, we specialize in professional video editing and comprehensive social media management. Our dedicated team works tirelessly to enhance your online presence, ensuring that your content resonates with your audience. With a passion for storytelling and creativity, we are committed to delivering high-quality services tailored to meet your unique needs.</p>
+            <p>At social.xyz, we specialize in professional video editing and comprehensive social media management. Our dedicated team works tirelessly to enhance your online presence, ensuring that your content resonates with your audience. With a passion for storytelling and creativity, we are committed to delivering high-quality services tailored to meet your unique needs. Our mission is to help brands connect with their audiences through captivating visual content and effective social media strategies.</p>
         </div>
 
         <!-- Services Section -->
         <div class="section" id="services">
             <h2>Our Services</h2>
-            <div class="card">Professional Video Editing</div>
-            <div class="card">Full Social Media Management</div>
-            <div class="card">Account Setup</div>
-            <div class="card">Google My Business</div>
-            <div class="card">Caption Writing</div>
-            <div class="card">Performance Tracking</div>
-            <div class="card">Content Scheduling</div>
-            <div class="card">Targeted Instagram Ads</div>
-            <div class="card">Instagram Highlights Cover</div>
-            <div class="card">Research Content</div>
+            <div class="card">
+                <img src="images/video-editing-icon.png" alt="Video Editing Icon"> <!-- Path to video editing icon -->
+                <div>Professional Video Editing: High-quality editing to bring your vision to life.</div>
+            </div>
+            <div class="card">
+                <img src="images/social-media-icon.png" alt="Social Media Icon"> <!-- Path to social media management icon -->
+                <div>Full Social Media Management: Comprehensive management of your social profiles.</div>
+            </div>
+            <div class="card">
+                <img src="images/account-setup-icon.png" alt="Account Setup Icon"> <!-- Path to account setup icon -->
+                <div>Account Setup: Create and optimize your social media accounts for success.</div>
+            </div>
+            <div class="card">
+                <img src="images/google-business-icon.png" alt="Google My Business Icon"> <!-- Path to Google My Business icon -->
+                <div>Google My Business: Enhance your local visibility and reach more customers.</div>
+            </div>
+            <div class="card">
+                <img src="images/caption-writing-icon.png" alt="Caption Writing Icon"> <!-- Path to caption writing icon -->
+                <div>Caption Writing: Craft engaging captions that resonate with your audience.</div>
+            </div>
+            <div class="card">
+                <img src="images/performance-tracking-icon.png" alt="Performance Tracking Icon"> <!-- Path to performance tracking icon -->
+                <div>Performance Tracking: Monitor your social media performance and optimize strategies.</div>
+            </div>
+            <div class="card">
+                <img src="images/content-scheduling-icon.png" alt="Content Scheduling Icon"> <!-- Path to content scheduling icon -->
+                <div>Content Scheduling: Plan and schedule your posts for maximum impact.</div>
+            </div>
+            <div class="card">
+                <img src="images/instagram-ads-icon.png" alt="Targeted Instagram Ads Icon"> <!-- Path to targeted Instagram ads icon -->
+                <div>Targeted Instagram Ads: Reach your ideal audience with effective ads.</div>
+            </div>
+            <div class="card">
+                <img src="images/highlights-cover-icon.png" alt="Instagram Highlights Cover Icon"> <!-- Path to Instagram highlights cover icon -->
+                <div>Instagram Highlights Cover: Create stunning covers for your Instagram highlights.</div>
+            </div>
+            <div class="card">
+                <img src="images/research-content-icon.png" alt="Research Content Icon"> <!-- Path to research content icon -->
+                <div>Research Content: In-depth research to inform your content strategy.</div>
+            </div>
         </div>
 
         <!-- Clients Section -->

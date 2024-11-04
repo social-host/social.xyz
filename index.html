@@ -4,118 +4,137 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>social.xyz</title>
+    <link rel="icon" href="images/site-logo.jpg" type="image/x-icon"> <!-- Favicon for the Chrome tab -->
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #000; /* Background color set to black */
+            background-color: #000; /* Changed background color to black */
             margin: 0;
             padding: 0;
-            color: #fff; /* Text color set to white for visibility */
+            display: flex;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .nav {
+            background-color: #333;
+            color: #fff;
+            width: 200px;
+            padding: 20px;
+            position: fixed;
+            height: 100%;
+        }
+        .nav img {
+            width: 100%;
+            border-radius: 50%; /* Circular logo */
+            margin-bottom: 20px;
+        }
+        .nav h1 {
+            font-size: 20px;
+            text-align: center;
+            margin: 10px 0;
+        }
+        .nav h2 {
+            text-align: center;
+            color: #fff;
+            font-size: 16px;
+            margin: 0;
+            padding: 5px 0;
+            border-bottom: 2px solid #fff; /* Horizontal line */
+        }
+        .nav p {
+            text-align: center;
+        }
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+            transition: color 0.3s;
+        }
+        .nav a:hover {
+            color: yellow; /* Change text color on hover */
         }
         .header {
-            background-color: #1e1e1e; /* Darker header background */
-            color: #fff;
+            margin-left: 220px; /* To prevent overlap with the nav */
             padding: 20px;
+            background-color: #333;
+            color: #fff;
             text-align: center;
         }
         .container {
             max-width: 800px;
-            margin: auto;
+            margin-left: 220px; /* To prevent overlap with the nav */
             padding: 20px;
         }
-        h1, h2 {
+        h2 {
             text-align: center;
-            color: #ffcc00; /* Golden color for headings */
+            color: #fff; /* Changed header color to white */
         }
         .section {
             margin-bottom: 40px;
+        }
+        .card {
+            background-color: #444; /* Card background color */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            transition: transform 0.2s;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .card img {
+            width: 30px; /* Size of the service icon */
+            height: 30px;
+            margin-right: 10px; /* Space between icon and text */
         }
         .logo-button {
             display: inline-block;
             margin: 15px;
             text-align: center;
-            color: #fff; /* Button text color */
+            color: #fff; /* Changed text color to white */
             text-decoration: none;
         }
         .logo-button img {
-            width: 120px; /* Increased radius */
-            height: 120px; /* Increased radius */
+            width: 200px; /* Increased size */
+            height: 200px; /* Increased size */
             object-fit: cover;
             border-radius: 50%; /* Makes the logo circular */
-            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); /* White shadow for visibility */
         }
         .logo-button p {
             margin-top: 8px;
             font-weight: bold;
         }
-        .scrolling-section {
-            overflow-x: auto;
-            white-space: nowrap;
-            margin: 20px 0;
-            padding: 10px;
-            background-color: #1e1e1e; /* Background color for scrolling section */
-            border-radius: 10px; /* Rounded corners */
-            scroll-behavior: smooth; /* Smooth scrolling */
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
-        .scrolling-section a {
-            display: inline-block;
-            margin: 0 10px;
-            color: #ffcc00; /* Color for scrolling links */
-            text-decoration: none;
-            font-size: 18px; /* Font size for scrolling links */
+        ::-webkit-scrollbar-track {
+            background: #444; /* Background color of the scrollbar track */
         }
-        .card {
-            background-color: #2a2a2a; /* Card background color */
-            border-radius: 10px;
-            padding: 20px;
-            margin: 10px 0;
-            text-align: center;
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the scrollbar thumb */
+            border-radius: 4px;
         }
-        .icon {
-            width: 30px; /* Size of the icons */
-            height: 30px;
-            vertical-align: middle;
-            margin-right: 10px; /* Space between icon and text */
-        }
-        .left-panel {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 200px; /* Width of the left panel */
-            height: 100%;
-            background-color: #1e1e1e; /* Background color of the left panel */
-            padding: 20px;
-            color: #fff; /* Text color in the left panel */
-            border-radius: 0 10px 10px 0; /* Rounded corners on the right side */
-        }
-        .left-panel img {
-            width: 150px; /* Size of the logo */
-            height: 150px;
-            border-radius: 50%; /* Circular logo */
-        }
-        .left-panel h2 {
-            margin: 10px 0;
-            color: #ffcc00; /* Color for name in left panel */
-        }
-        .left-panel p {
-            margin: 5px 0;
-        }
-        .about-us {
-            background-color: #1e1e1e; /* About Us background color */
-            padding: 20px;
-            border-radius: 10px;
-            color: #ffcc00; /* Color for About Us text */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Color of the scrollbar thumb on hover */
         }
     </style>
 </head>
 <body>
 
     <!-- Left Navigation Panel -->
-    <div class="left-panel">
-        <img src="images/site-logo.jpg" alt="Site Logo"> <!-- Path to site logo -->
-        <h2>Your Name</h2>
-        <p>Email: info.social.xyz@gmail.com</p>
-        <p>Phone: (Your Contact Number)</p> <!-- Replace with your contact number -->
+    <div class="nav">
+        <img src="images/site-logo.jpg" alt="Site Logo"> <!-- Path to your site logo -->
+        <h1>Your Name</h1> <!-- Replace with your name -->
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:info.social.xyz@gmail.com" style="color:white;">info.social.xyz@gmail.com</a></p>
+        <p>Phone: <a href="tel:+1234567890" style="color:white;">+1 234 567 890</a></p>
     </div>
 
     <!-- Header Section -->
@@ -127,74 +146,76 @@
     <div class="container">
 
         <!-- About Us Section -->
-        <div class="section about-us">
+        <div class="section" id="about">
             <h2>About Us</h2>
-            <p>We provide top-notch video editing and comprehensive social media management to enhance your online presence.</p>
+            <p>At social.xyz, we specialize in professional video editing and comprehensive social media management. Our dedicated team works tirelessly to enhance your online presence, ensuring that your content resonates with your audience. With a passion for storytelling and creativity, we are committed to delivering high-quality services tailored to meet your unique needs. Our mission is to help brands connect with their audiences through captivating visual content and effective social media strategies.</p>
         </div>
 
-        <!-- Our Services Section -->
-        <div class="section">
+        <!-- Services Section -->
+        <div class="section" id="services">
             <h2>Our Services</h2>
             <div class="card">
-                <img src="images/video-editing-icon.png" alt="Video Editing" class="icon">
-                <strong>Professional Video Editing</strong>
-                <p>Transforming raw footage into captivating stories.</p>
+                <img src="images/video-editing-icon.png" alt="Video Editing Icon"> <!-- Path to video editing icon -->
+                <div>Professional Video Editing: High-quality editing to bring your vision to life.</div>
             </div>
             <div class="card">
-                <img src="images/social-media-management-icon.png" alt="Social Media Management" class="icon">
-                <strong>Full Social Media Management</strong>
-                <p>Building your brand across various platforms.</p>
+                <img src="images/social-media-icon.png" alt="Social Media Icon"> <!-- Path to social media management icon -->
+                <div>Full Social Media Management: Comprehensive management of your social profiles.</div>
             </div>
             <div class="card">
-                <img src="images/account-setup-icon.png" alt="Account Setup" class="icon">
-                <strong>Account Setup</strong>
-                <p>Setting up your profiles for success.</p>
+                <img src="images/account-setup-icon.png" alt="Account Setup Icon"> <!-- Path to account setup icon -->
+                <div>Account Setup: Create and optimize your social media accounts for success.</div>
             </div>
             <div class="card">
-                <img src="images/google-my-business-icon.png" alt="Google My Business" class="icon">
-                <strong>Google My Business</strong>
-                <p>Enhancing your local presence.</p>
+                <img src="images/google-business-icon.png" alt="Google My Business Icon"> <!-- Path to Google My Business icon -->
+                <div>Google My Business: Enhance your local visibility and reach more customers.</div>
             </div>
             <div class="card">
-                <img src="images/caption-writing-icon.png" alt="Caption Writing" class="icon">
-                <strong>Caption Writing</strong>
-                <p>Crafting engaging captions that resonate.</p>
+                <img src="images/caption-writing-icon.png" alt="Caption Writing Icon"> <!-- Path to caption writing icon -->
+                <div>Caption Writing: Craft engaging captions that resonate with your audience.</div>
             </div>
             <div class="card">
-                <img src="images/performance-tracking-icon.png" alt="Performance Tracking" class="icon">
-                <strong>Performance Tracking</strong>
-                <p>Analyzing data to improve your strategy.</p>
+                <img src="images/performance-tracking-icon.png" alt="Performance Tracking Icon"> <!-- Path to performance tracking icon -->
+                <div>Performance Tracking: Monitor your social media performance and optimize strategies.</div>
             </div>
             <div class="card">
-                <img src="images/content-scheduling-icon.png" alt="Content Scheduling" class="icon">
-                <strong>Content Scheduling</strong>
-                <p>Planning your content for maximum engagement.</p>
+                <img src="images/content-scheduling-icon.png" alt="Content Scheduling Icon"> <!-- Path to content scheduling icon -->
+                <div>Content Scheduling: Plan and schedule your posts for maximum impact.</div>
             </div>
             <div class="card">
-                <img src="images/instagram-ads-icon.png" alt="Targeted Instagram Ads" class="icon">
-                <strong>Targeted Instagram Ads</strong>
-                <p>Reaching your audience effectively.</p>
+                <img src="images/instagram-ads-icon.png" alt="Targeted Instagram Ads Icon"> <!-- Path to targeted Instagram ads icon -->
+                <div>Targeted Instagram Ads: Reach your ideal audience with effective ads.</div>
             </div>
             <div class="card">
-                <img src="images/highlights-cover-icon.png" alt="Instagram Highlights Cover" class="icon">
-                <strong>Instagram Highlights Cover</strong>
-                <p>Creating a cohesive brand aesthetic.</p>
+                <img src="images/highlights-cover-icon.png" alt="Instagram Highlights Cover Icon"> <!-- Path to Instagram highlights cover icon -->
+                <div>Instagram Highlights Cover: Create stunning covers for your Instagram highlights.</div>
             </div>
             <div class="card">
-                <img src="images/research-content-icon.png" alt="Research Content" class="icon">
-                <strong>Research Content</strong>
-                <p>Identifying trends for relevant content.</p>
+                <img src="images/research-content-icon.png" alt="Research Content Icon"> <!-- Path to research content icon -->
+                <div>Research Content: In-depth research to inform your content strategy.</div>
             </div>
         </div>
 
         <!-- Clients Section -->
         <div class="section">
             <h2>Clients</h2>
-            <div class="scrolling-section">
-                <a href="https://www.instagram.com/evolvi._.vids/" target="_blank">evolvi._.vids</a>
-                <a href="https://www.instagram.com/explore_jhajjar_/" target="_blank">explore_jhajjar_</a>
-                <a href="https://www.instagram.com/sone_ki_khan_gurgaon_/" target="_blank">Sone Ki Khan Gurgaon</a>
-                <a href="https://www.instagram.com/bajrangi_nutritionss/" target="_blank">Bajrangi Nutritions</a>
+            <div style="display: flex; overflow-x: auto; padding: 10px 0;">
+                <a href="https://www.instagram.com/evolvi._.vids/" class="logo-button" target="_blank">
+                    <img src="images/evolvi_vids_logo.jpg" alt="Evolvi Vids Logo">
+                    <p>evolvi._.vids</p>
+                </a>
+                <a href="https://www.instagram.com/explore_jhajjar_/" class="logo-button" target="_blank">
+                    <img src="images/explore_jhajjar_logo.jpg" alt="Explore Jhajjar Logo">
+                    <p>explore_jhajjar_</p>
+                </a>
+                <a href="https://www.instagram.com/sone_ki_khan_gurgaon_/" class="logo-button" target="_blank">
+                    <img src="images/sone_ki_khan_gurgaon_logo.jpg" alt="Sone Ki Khan Gurgaon Logo">
+                    <p>Sone Ki Khan Gurgaon</p>
+                </a>
+                <a href="https://www.instagram.com/bajrangi_nutritionss/" class="logo-button" target="_blank">
+                    <img src="images/bajrangi_nutritions_logo.jpg" alt="Bajrangi Nutritions Logo">
+                    <p>Bajrangi Nutritions</p>
+                </a>
             </div>
         </div>
     </div>

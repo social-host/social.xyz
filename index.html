@@ -82,13 +82,19 @@
             transition: transform 0.2s;
             color: #000; /* Changed card text color to black */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            display: flex;
-            flex-direction: column; /* Align items in a column */
+            display: flex; /* Enable flexbox */
+            align-items: center; /* Center align items vertically */
         }
-        .card img {
-            width: 75px; /* Size of the service icon */
-            height: 75px;
-            margin-bottom: 10px; /* Space between icon and text */
+
+
+    .card img {
+        width: 30px; /* Size of the service icon */
+        height: 30px;
+        margin-right: 15px; /* Space between icon and text */
+    }
+        .card div {
+            flex: 1; /* Allow the text to take the remaining space */
+            text-align: center; /* Center align the text */
         }
         .logo-button {
             display: inline-block;

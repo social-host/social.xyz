@@ -3,218 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Social.XYZ</title>
+    <title>Social.xyz</title>
     <style>
-        /* CSS goes here */
+        /* Basic Reset and Styling */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         body {
             font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
             color: #333;
-        }
-
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px 0;
-        }
-
-        header .logo {
-            font-size: 24px;
-            font-weight: bold;
-        }
-
-        header nav ul {
-            list-style: none;
             display: flex;
-            gap: 20px;
-        }
-
-        header nav ul li a {
-            color: #fff;
-            text-decoration: none;
-        }
-
-        .hero {
-            background: url('hero-background.jpg') no-repeat center center/cover;
-            color: #fff;
-            padding: 100px 0;
-            text-align: center;
-        }
-
-        .hero h2 {
-            font-size: 36px;
-        }
-
-        .hero p {
-            font-size: 18px;
-            margin: 20px 0;
-        }
-
-        .cta-button {
-            padding: 10px 20px;
-            color: #333;
-            background-color: #ff9800;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .section {
-            padding: 60px 0;
-        }
-
-        #services .services-grid,
-        #portfolio .portfolio-grid,
-        #clients .clients-grid {
-            display: grid;
-            gap: 20px;
-        }
-
-        #services .service-item,
-        #portfolio .portfolio-item,
-        #clients .client-item {
-            background-color: #f4f4f4;
+            flex-direction: column;
+            align-items: center;
             padding: 20px;
-            border-radius: 5px;
-            text-align: center;
+        }
+        h1 {
+            margin-top: 20px;
+            color: #2c3e50;
+        }
+        p {
+            margin-bottom: 20px;
+            font-size: 18px;
         }
 
-        .instagram-button {
-            margin-top: 10px;
-            padding: 8px 15px;
-            color: #fff;
-            background-color: #e4405f;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
+        /* Container for Logos */
+        .logo-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
         }
 
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 0;
+        /* Logo Button Styling */
+        .logo-button {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            cursor: pointer;
+        }
+        .logo-button img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .logo-button:hover {
+            transform: scale(1.1);
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <h1 class="logo">Social.XYZ</h1>
-            <nav>
-                <ul>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#clients">Clients</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h2>Your Social Media, Our Expertise</h2>
-            <p>Professional editing and management solutions for a standout digital presence.</p>
-            <a href="#services" class="cta-button">Discover Our Services</a>
-        </div>
-    </section>
+    <h1>Welcome to Social.xyz</h1>
+    <p>Explore our Instagram pages and partners:</p>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="container">
-            <h2>Our Services</h2>
-            <div class="services-grid">
-                <div class="service-item">
-                    <h3>Video Editing</h3>
-                    <p>Professional video edits to captivate your audience.</p>
-                </div>
-                <div class="service-item">
-                    <h3>Social Media Management</h3>
-                    <p>Complete social media management to boost engagement.</p>
-                </div>
-                <!-- Add more services as needed -->
-            </div>
-        </div>
-    </section>
+    <div class="logo-container">
+        <!-- Evolvi Vids Button -->
+        <a href="https://www.instagram.com/evolvi._.vids/" target="_blank" class="logo-button">
+            <img src="path/to/evolvi_vids_logo.jpg" alt="Evolvi Vids Logo">
+        </a>
 
-    <!-- Portfolio Section -->
-    <section id="portfolio">
-        <div class="container">
-            <h2>Portfolio</h2>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">Project 1</div>
-                <div class="portfolio-item">Project 2</div>
-                <!-- Add more projects -->
-            </div>
-        </div>
-    </section>
+        <!-- Explore Jhajjar Button (Replace placeholder when logo is provided) -->
+        <a href="https://www.instagram.com/explore_jhajjar_/" target="_blank" class="logo-button">
+            <img src="path/to/explore_jhajjar_logo.jpg" alt="Explore Jhajjar Logo">
+        </a>
 
-    <!-- Clients Section -->
-    <section id="clients">
-        <div class="container">
-            <h2>Our Clients</h2>
-            <div class="clients-grid">
-                <div class="client-item">
-                    <img src="client-logo1.jpg" alt="Client Logo 1" width="100">
-                    <p>Client Name 1</p>
-                    <a href="https://instagram.com/client1" class="instagram-button" target="_blank">Instagram</a>
-                </div>
-                <div class="client-item">
-                    <img src="client-logo2.jpg" alt="Client Logo 2" width="100">
-                    <p>Client Name 2</p>
-                    <a href="https://instagram.com/client2" class="instagram-button" target="_blank">Instagram</a>
-                </div>
-                <!-- Add more clients as needed -->
-            </div>
-        </div>
-    </section>
+        <!-- Sone Ki Khan Gurgaon Button -->
+        <a href="https://www.instagram.com/sone_ki_khan_gurgaon_/" target="_blank" class="logo-button">
+            <img src="path/to/sone_ki_khan_gurgaon_logo.jpg" alt="Sone Ki Khan Gurgaon Logo">
+        </a>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>We're passionate about helping brands shine online through expert social media management and top-notch video editing.</p>
-        </div>
-    </section>
+        <!-- Bajrangi Nutritions Button -->
+        <a href="https://www.instagram.com/bajrangi_nutritionss/" target="_blank" class="logo-button">
+            <img src="path/to/bajrangi_nutritions_logo.jpg" alt="Bajrangi Nutritions Logo">
+        </a>
+    </div>
 
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <div class="container">
-            <h2>What Our Clients Say</h2>
-            <div class="testimonial-item">
-                <p>"Social.XYZ transformed our social media presence!" - Client A</p>
-            </div>
-            <!-- Add more testimonials -->
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <h2>Contact Us</h2>
-            <p>Email: info.social.xyz@gmail.com</p> 
-            <p>Follow us on Instagram: <a href="https://instagram.com/evolvi._.vids" class="instagram-button" target="_blank">evolvi._.vids</a></p>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2024 Social.XYZ. All rights reserved.</p>
-    </footer>
 </body>
 </html>

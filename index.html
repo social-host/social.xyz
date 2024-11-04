@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>social.xyz</title>
+    <link rel="icon" href="images/site-logo.jpg" type="image/x-icon"> <!-- Favicon for the Chrome tab -->
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -11,6 +12,7 @@
             margin: 0;
             padding: 0;
             display: flex;
+            overflow-x: hidden; /* Prevent horizontal scroll */
         }
         .nav {
             background-color: #333;
@@ -57,13 +59,24 @@
         .section {
             margin-bottom: 40px;
         }
+        .card {
+            background-color: #444; /* Card background color */
+            border-radius: 8px;
+            padding: 20px;
+            margin: 10px 0;
+            transition: transform 0.2s;
+            color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
         .logo-button {
             display: inline-block;
             margin: 15px;
             text-align: center;
             color: #fff; /* Changed text color to white */
             text-decoration: none;
-            animation: slide-in 0.5s ease-in-out;
         }
         .logo-button img {
             width: 200px; /* Increased size */
@@ -77,23 +90,28 @@
             font-weight: bold;
         }
 
-        @keyframes slide-in {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar {
+            width: 8px;
         }
+        ::-webkit-scrollbar-track {
+            background: #444; /* Background color of the scrollbar track */
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888; /* Color of the scrollbar thumb */
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555; /* Color of the scrollbar thumb on hover */
+        }
+
     </style>
 </head>
 <body>
 
     <!-- Left Navigation Panel -->
     <div class="nav">
-        <img src="images/your_site_logo.jpg" alt="Site Logo"> <!-- Path to your site logo -->
+        <img src="images/site-logo.jpg" alt="Site Logo"> <!-- Path to your site logo -->
         <h1>Contact Us</h1>
         <p>Email: <a href="mailto:info.social.xyz@gmail.com" style="color:white;">info.social.xyz@gmail.com</a></p>
         <p>Phone: <a href="tel:+1234567890" style="color:white;">+1 234 567 890</a></p>
@@ -110,24 +128,22 @@
         <!-- About Us Section -->
         <div class="section" id="about">
             <h2>About Us</h2>
-            <p>At social.xyz, we specialize in professional video editing and comprehensive social media management. Our team is dedicated to enhancing your online presence and helping you connect with your audience effectively.</p>
+            <p>At social.xyz, we specialize in professional video editing and comprehensive social media management. Our dedicated team works tirelessly to enhance your online presence, ensuring that your content resonates with your audience. With a passion for storytelling and creativity, we are committed to delivering high-quality services tailored to meet your unique needs.</p>
         </div>
 
         <!-- Services Section -->
         <div class="section" id="services">
             <h2>Our Services</h2>
-            <ul style="color: #fff;"> <!-- Changed text color to white -->
-                <li>Professional Video Editing</li>
-                <li>Full Social Media Management</li>
-                <li>Account Setup</li>
-                <li>Google My Business</li>
-                <li>Caption Writing</li>
-                <li>Performance Tracking</li>
-                <li>Content Scheduling</li>
-                <li>Targeted Instagram Ads</li>
-                <li>Instagram Highlights Cover</li>
-                <li>Research Content</li>
-            </ul>
+            <div class="card">Professional Video Editing</div>
+            <div class="card">Full Social Media Management</div>
+            <div class="card">Account Setup</div>
+            <div class="card">Google My Business</div>
+            <div class="card">Caption Writing</div>
+            <div class="card">Performance Tracking</div>
+            <div class="card">Content Scheduling</div>
+            <div class="card">Targeted Instagram Ads</div>
+            <div class="card">Instagram Highlights Cover</div>
+            <div class="card">Research Content</div>
         </div>
 
         <!-- Clients Section -->

@@ -6,6 +6,27 @@
     <title>social.xyz</title>
     <link rel="icon" href="images/site-logo.jpg" type="image/x-icon"> <!-- Favicon for the Chrome tab -->
     <style>
+        /* By default, ye desktop ke liye hoga */
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        
+        /* Mobile screens ke liye */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+                padding: 10px;
+            }
+        }
+        /* Small mobile screens ke liye */
+        @media (max-width: 480px) {
+            .container {
+                width: 100%;
+                padding: 5px;
+            }
+        }
+        
         body {
             font-family: Arial, sans-serif;
             background-color: #fff; /* Changed background color to white */

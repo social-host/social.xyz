@@ -101,23 +101,36 @@
             line-height: 1.6; /* Line height for better readability */
             margin: 10px 0; /* Add margin to paragraphs */
         }
+        /* Client logo hover pop-up effect */
         .logo-button {
             display: inline-block;
             margin: 15px;
-            text-align: centre;
-            color: #000; /* Changed text color to black */
+            text-align: center;
+            color: #000;
             text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for scale and shadow */
         }
+        
         .logo-button img {
-            width: 200px; /* Increased size */
-            height: 200px; /* Increased size */
+            width: 200px;
+            height: 200px;
             object-fit: cover;
-            border-radius: 50%; /* Makes the logo circular */
-            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2); /* White shadow for visibility */
+            border-radius: 50%;
+            box-shadow: 0px 4px 8px rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover */
         }
+        .logo-button:hover img {
+            transform: scale(1.1); /* Slightly scale up on hover */
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Pop-up shadow effect */
+        }
+        
         .logo-button p {
             margin-top: 8px;
             font-weight: bold;
+            transition: color 0.3s;
+        }
+        .logo-button:hover p {
+            color: yellow; /* Text color change on hover */
         }
 
         /* Scrollbar Styling */
